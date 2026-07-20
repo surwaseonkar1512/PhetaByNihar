@@ -1,5 +1,4 @@
 import React from 'react';
-import { Divider } from '../ui/Divider';
 import { motion } from 'framer-motion';
 import { Calendar, ArrowRight } from 'lucide-react';
 import { Button } from '../ui/Button';

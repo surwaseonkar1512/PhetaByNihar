@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Play } from 'lucide-react';
-import { Button } from '../ui/Button';
 import { Divider } from '../ui/Divider';
 
 export const FeaturedConversations: React.FC = () => {
