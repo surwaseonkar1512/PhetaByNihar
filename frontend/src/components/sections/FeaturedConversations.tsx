@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Play } from 'lucide-react';
 import { Button } from '../ui/Button';
+import { Divider } from '../ui/Divider';
 
 export const FeaturedConversations: React.FC = () => {
   const [activeTab, setActiveTab] = useState('All');
@@ -19,20 +20,18 @@ export const FeaturedConversations: React.FC = () => {
     <section className="py-16 px-5 md:px-10 lg:px-20 max-w-[1400px] mx-auto">
 
       {/* Section Header */}
+
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="text-center mb-10"
+        className="text-center mb-16"
       >
-        <div className="flex items-center justify-center mb-6">
-          <div className="h-[1px] w-8 bg-[#E8D8C5]"></div>
-          <h2 className="px-4 text-sm font-sans tracking-[0.2em] uppercase text-[#C48B3C] font-bold">
-            Featured Conversations & Podcasts
-          </h2>
-          <div className="h-[1px] w-8 bg-[#E8D8C5]"></div>
-        </div>
+        <h2 className="text-3xl lg:text-4xl font-serif text-[#4D2D22] font-bold">
+          Featured Conversations & Podcasts
+        </h2>
+        <Divider />
       </motion.div>
 
       {/* Tabs */}

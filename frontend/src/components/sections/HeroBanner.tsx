@@ -39,9 +39,6 @@ export const HeroBanner: React.FC = () => {
             Pheta Ceremony
           </h1>
 
-          {/* Decorative Divider */}
-          <Divider className="ml-0 max-w-[400px]" />
-
           <p className="text-[#4D2D22] font-sans text-lg lg:text-xl mb-10 max-w-lg leading-relaxed font-medium">
             Honoring traditions with elegance, respect & pride.<br />
             From royal weddings to cultural celebrations,<br />

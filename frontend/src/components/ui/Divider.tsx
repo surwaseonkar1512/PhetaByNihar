@@ -21,7 +21,7 @@ export const Divider: React.FC<{ className?: string }> = ({ className = '' }) =>
         <img
           src="/divider.png"
           alt="Divider"
-          className="absolute w-full h-full object-cover object-center"
+          className="absolute w-full h-full object-contain object-center"
         />
       </div>
     </div>
