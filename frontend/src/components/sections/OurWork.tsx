@@ -32,7 +32,7 @@ export const OurWork: React.FC = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="col-span-2 row-span-2 relative rounded-[16px] overflow-hidden shadow-soft group"
         >
-          <img src="/hero_bride_groom.png" alt="Gallery 1" className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
+          <img src="/pheta_by_nihar_tambde_1645633815_2780100398651064414_2400202343.webp" alt="Gallery 1" className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
         </motion.div>
 
         {/* Top Right Images */}
@@ -43,7 +43,7 @@ export const OurWork: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
           className="col-span-1 row-span-1 relative rounded-[16px] overflow-hidden shadow-soft group"
         >
-          <img src="/service_pheta.webp" alt="Gallery 2" className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
+          <img src="/pheta_by_nihar_tambde_1654463102_2854165829931617736_2400202343.webp" alt="Gallery 2" className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
         </motion.div>
         <motion.div
           initial={{ opacity: 0, x: 20 }}
@@ -52,7 +52,7 @@ export const OurWork: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
           className="col-span-1 row-span-1 relative rounded-[16px] overflow-hidden shadow-soft group"
         >
-          <img src="/about_portrait.png" alt="Gallery 3" className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 object-top" />
+          <img src="/pheta_by_nihar_tambde_1665393499_2945856640876056884_2400202343.webp" alt="Gallery 3" className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 object-top" />
         </motion.div>
 
         {/* Bottom Right Images */}
@@ -63,7 +63,7 @@ export const OurWork: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
           className="col-span-1 row-span-1 relative rounded-[16px] overflow-hidden shadow-soft group"
         >
-          <img src="/hero_bride_groom.png" alt="Gallery 4" className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
+          <img src="/pheta_by_nihar_tambde_1665393890_2945859920821826134_2400202343.webp" alt="Gallery 4" className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
         </motion.div>
 
         {/* View Gallery Card */}
@@ -83,4 +83,3 @@ export const OurWork: React.FC = () => {
     </section>
   );
 };
-

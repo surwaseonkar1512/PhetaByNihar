@@ -8,6 +8,7 @@ import { FeaturedConversations } from './components/sections/FeaturedConversatio
 import { ProductsPreview } from './components/sections/ProductsPreview';
 import { MediaAndTestimonials } from './components/sections/MediaAndTestimonials';
 import { Footer } from './components/sections/Footer';
+import { Testimonials } from './components/sections/Testimonials';
 
 function App() {
   return (

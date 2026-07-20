@@ -24,8 +24,8 @@ export const Testimonials: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 px-5 md:px-10 lg:px-20 max-w-[1400px] mx-auto bg-[#FFFDFB]">
-      
+    <section className="relative py-20 px-5 md:px-10 lg:px-20 max-w-[1400px] mx-auto bg-[#FFFDFB]">
+
       <div className="text-center mb-12 flex flex-col items-center">
         <h2 className="text-sm font-sans tracking-[0.2em] uppercase text-[#C48B3C] font-bold">
           CLIENT LOVE
@@ -33,7 +33,15 @@ export const Testimonials: React.FC = () => {
         <Divider />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+        <div className="absolute left-0 bottom-0 opacity-100 pointer-events-none z-0">
+          <div className="relative">
+            <img src="/aboutsideiamge.png" alt="" className="w-[400px] md:w-[600px] lg:w-[800px] mix-blend-multiply object-contain object-bottom -scale-x-100" />
+            {/* Subtle Fog effects for blending */}
+            <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#FFFDFB] to-transparent"></div>
+            <div className="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-[#FFFDFB] to-transparent"></div>
+          </div>
+        </div>
         {reviews.map((review, index) => (
           <div key={index} className="bg-white p-8 rounded-[16px] shadow-soft border border-[#E8D8C5] flex flex-col relative">
             <div className="absolute top-6 left-6 text-6xl text-[#F4E8DA] font-serif leading-none">"</div>
@@ -57,7 +65,7 @@ export const Testimonials: React.FC = () => {
         <div className="w-2 h-2 rounded-full bg-[#E8D8C5]"></div>
         <div className="w-2 h-2 rounded-full bg-[#E8D8C5]"></div>
       </div>
-      
+
     </section>
   );
 };
