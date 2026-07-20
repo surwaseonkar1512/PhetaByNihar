@@ -1,7 +1,7 @@
 import React from 'react';
 import { Divider } from '../ui/Divider';
 import { motion } from 'framer-motion';
-import { ArrowRight, Crown, Tent, Briefcase, GraduationCap } from 'lucide-react';
+import { Crown, Tent, Briefcase, GraduationCap } from 'lucide-react';
 
 export const ServicesSection: React.FC = () => {
   const services = [

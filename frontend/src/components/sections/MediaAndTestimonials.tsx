@@ -1,7 +1,6 @@
 import React from 'react';
 import { Divider } from '../ui/Divider';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
 
 export const MediaAndTestimonials: React.FC = () => {
   const reviews = [
