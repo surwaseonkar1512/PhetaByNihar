@@ -24,7 +24,7 @@ export const AboutSection: React.FC = () => {
   // ];
 
   return (
-    <section id="about" className="py-24 px-5 md:px-10 lg:px-16 max-w-[1400px] mx-auto relative">
+    <section id="about" className="py-12 md:py-20 lg:py-24 px-5 md:px-10 lg:px-16 max-w-[1400px] mx-auto relative">
 
       {/* Decorative Mandala on the right edge */}
       <div className="absolute right-0 bottom-0 opacity-100 pointer-events-none z-0">

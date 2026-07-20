@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react';
 
 export const MediaRecognition: React.FC = () => {
   return (
-    <section className="py-12 px-5 md:px-10 lg:px-20 max-w-[1400px] mx-auto border-t border-[#E8D8C5]">
+    <section className="py-8 md:py-12 px-5 md:px-10 lg:px-20 max-w-[1400px] mx-auto border-t border-[#E8D8C5]">
       <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
         
         <div className="flex items-center">

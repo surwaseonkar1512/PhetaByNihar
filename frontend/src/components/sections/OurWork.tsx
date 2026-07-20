@@ -5,7 +5,7 @@ import { ImageIcon, ArrowRight } from 'lucide-react';
 
 export const OurWork: React.FC = () => {
   return (
-    <section id="work" className="py-14 px-5 md:px-10 lg:px-20 max-w-[1400px] mx-auto bg-[#FFFDFB]">
+    <section id="work" className="py-10 md:py-14 px-5 md:px-10 lg:px-20 max-w-[1400px] mx-auto bg-[#FFFDFB]">
 
       {/* Section Header */}
       <motion.div

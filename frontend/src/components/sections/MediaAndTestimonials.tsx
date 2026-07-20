@@ -38,7 +38,7 @@ export const MediaAndTestimonials: React.FC = () => {
   );
 
   return (
-    <section className="relative w-full py-20">
+    <section className="relative w-full py-8 md:py-16 lg:py-20">
       {/* Background Image */}
       <div className="absolute inset-0 bg-[url('/aboutsideiamge.png')] bg-cover bg-center opacity-30 pointer-events-none"></div>
       {/* Dark overlay for readability */}

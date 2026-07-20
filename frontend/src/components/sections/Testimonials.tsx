@@ -24,7 +24,7 @@ export const Testimonials: React.FC = () => {
   ];
 
   return (
-    <section className="relative py-20 px-5 md:px-10 lg:px-20 max-w-[1400px] mx-auto bg-[#FFFDFB]">
+    <section className="relative py-10 md:py-16 lg:py-20 px-5 md:px-10 lg:px-20 max-w-[1400px] mx-auto bg-[#FFFDFB]">
 
       <div className="text-center mb-12 flex flex-col items-center">
         <h2 className="text-sm font-sans tracking-[0.2em] uppercase text-[#C48B3C] font-bold">

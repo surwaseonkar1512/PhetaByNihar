@@ -32,7 +32,7 @@ export const ServicesSection: React.FC = () => {
   ];
 
   return (
-    <section id="services" className="py-14 px-5 md:px-10 lg:px-20 max-w-[1400px] mx-auto">
+    <section id="services" className="py-10 md:py-14 px-5 md:px-10 lg:px-20 max-w-[1400px] mx-auto">
 
       {/* Section Header */}
       <motion.div
