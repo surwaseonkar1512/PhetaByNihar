@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
 export const MediaAndTestimonials: React.FC = () => {
@@ -95,7 +96,14 @@ export const MediaAndTestimonials: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 w-full mt-10">
             {reviews.map((review, index) => (
-              <div key={index} className="bg-[#FFFDFB] p-8 rounded-[24px] shadow-sm border border-[#E8D8C5] flex flex-col hover:shadow-md transition-all duration-300 transform hover:-translate-y-1">
+              <motion.div 
+                key={index} 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
+                className="bg-[#FFFDFB] p-8 rounded-[24px] shadow-sm border border-[#E8D8C5] flex flex-col hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
+              >
 
                 <div className="flex flex-col gap-3 mb-8">
                   <div className="text-6xl font-serif text-[#C48B3C] leading-none opacity-40 h-8">“</div>
@@ -112,7 +120,7 @@ export const MediaAndTestimonials: React.FC = () => {
                   </div>
                 </div>
 
-              </div>
+              </motion.div>
             ))}
           </div>
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { Play } from 'lucide-react';
 import { Button } from '../ui/Button';
 
@@ -8,17 +9,23 @@ export const FeaturedConversations: React.FC = () => {
 
   const videos = [
     { title: 'The Legacy of Pheta & Maharashtrian Culture', channel: 'Lokmat Podcast', duration: '28:45', image: '/about_portrait.png', featured: true },
-    { title: 'Pheta - A Symbol of Respect & Pride', channel: 'ABP Majha', duration: '22:30', image: '/service_pheta.png', featured: false },
+    { title: 'Pheta - A Symbol of Respect & Pride', channel: 'ABP Majha', duration: '22:30', image: '/service_pheta.webp', featured: false },
     { title: 'Traditions That Bind Us Together', channel: 'TV9 Marathi', duration: '19:55', image: '/hero_bride_groom.png', featured: false },
-    { title: 'The Royal Art of Pheta Tying', channel: 'Sakal Podcast', duration: '34:10', image: '/service_pheta.png', featured: false },
+    { title: 'The Royal Art of Pheta Tying', channel: 'Sakal Podcast', duration: '34:10', image: '/service_pheta.webp', featured: false },
     { title: 'Youth, Culture & Our Maharashtrian Roots', channel: 'Pune Live', duration: '24:05', image: '/about_portrait.png', featured: false },
   ];
 
   return (
-    <section className="py-24 px-5 md:px-10 lg:px-20 max-w-[1400px] mx-auto">
-      
+    <section className="py-16 px-5 md:px-10 lg:px-20 max-w-[1400px] mx-auto">
+
       {/* Section Header */}
-      <div className="text-center mb-10">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="text-center mb-10"
+      >
         <div className="flex items-center justify-center mb-6">
           <div className="h-[1px] w-8 bg-[#E8D8C5]"></div>
           <h2 className="px-4 text-sm font-sans tracking-[0.2em] uppercase text-[#C48B3C] font-bold">
@@ -26,7 +33,7 @@ export const FeaturedConversations: React.FC = () => {
           </h2>
           <div className="h-[1px] w-8 bg-[#E8D8C5]"></div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Tabs */}
       <div className="flex flex-wrap justify-center gap-3 mb-12">
@@ -34,11 +41,10 @@ export const FeaturedConversations: React.FC = () => {
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`px-6 py-2 rounded-full font-sans text-sm font-medium transition-all ${
-              activeTab === tab 
-                ? 'bg-[#6E1E18] text-white shadow-soft' 
-                : 'bg-white text-[#666666] border border-[#E8D8C5] hover:bg-[#F8F3EC]'
-            }`}
+            className={`px-6 py-2 rounded-full font-sans text-sm font-medium transition-all ${activeTab === tab
+              ? 'bg-[#6E1E18] text-white shadow-soft'
+              : 'bg-white text-[#666666] border border-[#E8D8C5] hover:bg-[#F8F3EC]'
+              }`}
           >
             {tab}
           </button>
@@ -48,7 +54,13 @@ export const FeaturedConversations: React.FC = () => {
       {/* Videos Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-12">
         {/* Large Featured Video */}
-        <div className="lg:col-span-2 bg-black rounded-[16px] overflow-hidden relative group cursor-pointer h-[350px]">
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="lg:col-span-2 bg-black rounded-[16px] overflow-hidden relative group cursor-pointer h-[350px]"
+        >
           <img src={videos[0].image} alt={videos[0].title} className="w-full h-full object-cover opacity-70 group-hover:opacity-90 transition-opacity duration-500" />
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="w-16 h-16 rounded-full border-2 border-white flex items-center justify-center bg-black/30 backdrop-blur-sm group-hover:scale-110 transition-transform">
@@ -62,12 +74,19 @@ export const FeaturedConversations: React.FC = () => {
               <span className="flex items-center"><Play className="w-4 h-4 mr-1" /> {videos[0].duration}</span>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Small Video Cards */}
         <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
           {videos.slice(1).map((video, idx) => (
-            <div key={idx} className="bg-white rounded-[16px] overflow-hidden shadow-soft border border-[#E8D8C5] group cursor-pointer flex flex-col">
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: idx * 0.1, ease: "easeOut" }}
+              className="bg-white rounded-[16px] overflow-hidden shadow-soft border border-[#E8D8C5] group cursor-pointer flex flex-col"
+            >
               <div className="relative h-32 overflow-hidden bg-black">
                 <img src={video.image} alt={video.title} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -88,26 +107,12 @@ export const FeaturedConversations: React.FC = () => {
                   {video.channel}
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
 
-      {/* Featured Logos & CTA */}
-      <div className="flex flex-col md:flex-row justify-between items-center gap-6 border-t border-[#E8D8C5] pt-10">
-        <div className="flex items-center gap-6 flex-wrap justify-center">
-          <span className="text-sm font-sans text-[#999999]">Featured On</span>
-          {/* Logo placeholders */}
-          <div className="flex gap-4 opacity-50 grayscale hover:grayscale-0 transition-all">
-            {['YouTube', 'Lokmat', 'Sakal', 'ABP', 'TV9'].map((logo, i) => (
-               <span key={i} className="font-serif font-bold text-[#4D2D22] text-xl">{logo}</span>
-            ))}
-          </div>
-        </div>
-        <Button variant="secondary" className="border-[#ff0000] text-[#ff0000] hover:bg-[#ff0000]/5 flex items-center">
-          <Play className="w-4 h-4 mr-2" fill="currentColor" /> Watch More on YouTube
-        </Button>
-      </div>
+
 
     </section>
   );
