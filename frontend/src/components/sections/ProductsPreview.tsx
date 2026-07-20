@@ -1,4 +1,5 @@
 import React from 'react';
+import { Divider } from '../ui/Divider';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
@@ -23,12 +24,11 @@ export const ProductsPreview: React.FC = () => {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="text-center mb-12"
       >
-        <div className="flex items-center justify-center">
-          <div className="h-[1px] w-8 bg-[#C48B3C]"></div>
+        <div className="flex flex-col items-center justify-center">
           <h2 className="px-4 text-sm font-sans tracking-[0.2em] uppercase text-[#C48B3C] font-bold">
             Products & Rentals Preview
           </h2>
-          <div className="h-[1px] w-8 bg-[#C48B3C]"></div>
+          <Divider />
         </div>
       </motion.div>
 
@@ -72,3 +72,4 @@ export const ProductsPreview: React.FC = () => {
     </section>
   );
 };
+

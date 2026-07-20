@@ -1,4 +1,5 @@
 import React from 'react';
+import { Divider } from '../ui/Divider';
 import { motion } from 'framer-motion';
 import { Calendar, ArrowRight } from 'lucide-react';
 import { Button } from '../ui/Button';
@@ -37,6 +38,9 @@ export const HeroBanner: React.FC = () => {
             <span className="text-[#6E1E18]">Maharashtrian</span><br />
             Pheta Ceremony
           </h1>
+
+          {/* Decorative Divider */}
+          <Divider className="ml-0 max-w-[400px]" />
 
           <p className="text-[#4D2D22] font-sans text-lg lg:text-xl mb-10 max-w-lg leading-relaxed font-medium">
             Honoring traditions with elegance, respect & pride.<br />
@@ -89,3 +93,4 @@ export const HeroBanner: React.FC = () => {
     </section>
   );
 };
+

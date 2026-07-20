@@ -1,4 +1,5 @@
 import React from 'react';
+import { Divider } from '../ui/Divider';
 
 export const Testimonials: React.FC = () => {
   const reviews = [
@@ -25,10 +26,11 @@ export const Testimonials: React.FC = () => {
   return (
     <section className="py-20 px-5 md:px-10 lg:px-20 max-w-[1400px] mx-auto bg-[#FFFDFB]">
       
-      <div className="text-center mb-12">
+      <div className="text-center mb-12 flex flex-col items-center">
         <h2 className="text-sm font-sans tracking-[0.2em] uppercase text-[#C48B3C] font-bold">
           CLIENT LOVE
         </h2>
+        <Divider />
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -59,3 +61,4 @@ export const Testimonials: React.FC = () => {
     </section>
   );
 };
+

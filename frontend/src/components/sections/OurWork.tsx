@@ -1,4 +1,5 @@
 import React from 'react';
+import { Divider } from '../ui/Divider';
 import { motion } from 'framer-motion';
 import { ImageIcon, ArrowRight } from 'lucide-react';
 
@@ -17,11 +18,7 @@ export const OurWork: React.FC = () => {
         <h2 className="text-3xl lg:text-4xl font-serif text-[#4D2D22] font-bold">
           OUR WORK
         </h2>
-        <div className="flex items-center justify-center mt-4">
-          <div className="h-[1px] w-16 bg-[#C48B3C]"></div>
-          <div className="w-2 h-2 rounded-full bg-[#C48B3C] mx-2"></div>
-          <div className="h-[1px] w-16 bg-[#C48B3C]"></div>
-        </div>
+        <Divider />
       </motion.div>
 
       {/* Gallery Grid - Complex Layout */}
@@ -86,3 +83,4 @@ export const OurWork: React.FC = () => {
     </section>
   );
 };
+

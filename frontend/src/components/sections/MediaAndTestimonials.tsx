@@ -1,4 +1,5 @@
 import React from 'react';
+import { Divider } from '../ui/Divider';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
@@ -27,11 +28,11 @@ export const MediaAndTestimonials: React.FC = () => {
   const SectionHeader = ({ title }: { title: string }) => (
     <div className="flex items-center justify-center mb-6 w-full max-w-3xl mx-auto">
       <div className="h-[1px] flex-1 bg-[#E8D8C5]"></div>
-      <div className="px-6 flex flex-col items-center">
+      <div className="px-6 flex flex-col items-center w-full">
         <h2 className="text-xl md:text-2xl font-serif font-bold text-[#4D2D22] tracking-wider uppercase mb-1">
           {title}
         </h2>
-        <div className="text-[#C48B3C] text-sm">❦</div>
+        <Divider />
       </div>
       <div className="h-[1px] flex-1 bg-[#E8D8C5]"></div>
     </div>
@@ -136,3 +137,4 @@ export const MediaAndTestimonials: React.FC = () => {
     </div>
   );
 };
+

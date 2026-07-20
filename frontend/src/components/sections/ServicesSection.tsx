@@ -1,4 +1,5 @@
 import React from 'react';
+import { Divider } from '../ui/Divider';
 import { motion } from 'framer-motion';
 import { ArrowRight, Crown, Tent, Briefcase, GraduationCap } from 'lucide-react';
 import { Button } from '../ui/Button';
@@ -45,11 +46,7 @@ export const ServicesSection: React.FC = () => {
         <h2 className="text-3xl lg:text-4xl font-serif text-[#4D2D22] font-bold">
           PHETA SERVICES & WORKSHOPS
         </h2>
-        <div className="flex items-center justify-center mt-4">
-          <div className="h-[1px] w-16 bg-[#C48B3C]"></div>
-          <Crown className="text-[#C48B3C] w-5 h-5 mx-2 opacity-50" />
-          <div className="h-[1px] w-16 bg-[#C48B3C]"></div>
-        </div>
+        <Divider />
       </motion.div>
 
       {/* Grid Layout */}
@@ -93,3 +90,4 @@ export const ServicesSection: React.FC = () => {
     </section>
   );
 };
+

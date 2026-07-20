@@ -1,4 +1,5 @@
 import React from 'react';
+import { Divider } from '../ui/Divider';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '../ui/Button';
@@ -61,9 +62,11 @@ export const AboutSection: React.FC = () => {
           <p className="text-[#C48B3C] font-sans font-bold tracking-[0.15em] text-sm uppercase mb-3">
             About Nihar Tambde
           </p>
-          <h2 className="text-4xl lg:text-5xl font-serif text-[#4D2D22] leading-tight mb-6">
+          <h2 className="text-4xl lg:text-5xl font-serif text-[#4D2D22] leading-tight mb-4">
             A Tradition Passed <br /> Down with <span className="text-[#6E1E18]">Pride.</span>
           </h2>
+          {/* Decorative Divider */}
+          <Divider className="ml-0 max-w-[400px]" />
           <p className="text-[#4D2D22] font-sans text-base leading-relaxed mb-6 font-medium">
             With deep respect for Maharashtrian culture and years of dedicated practice, Nihar Tambde keeps the royal tradition of Pheta tying alive. Each fold is more than just cloth – it's an emotion, a symbol of respect, honor and our glorious heritage.
           </p>
@@ -101,3 +104,4 @@ export const AboutSection: React.FC = () => {
     </section>
   );
 };
+
