@@ -38,7 +38,7 @@ export const MediaAndTestimonials: React.FC = () => {
   );
 
   return (
-    <section className="relative w-full py-8 md:py-16 lg:py-20">
+    <section className="relative w-full py-2">
       {/* Background Image */}
       <div className="absolute inset-0 bg-[url('/aboutsideiamge.png')] bg-cover bg-center opacity-30 pointer-events-none"></div>
       {/* Dark overlay for readability */}
@@ -50,9 +50,7 @@ export const MediaAndTestimonials: React.FC = () => {
           <div className="max-w-[1400px] mx-auto flex flex-wrap xl:flex-nowrap items-center justify-between gap-6 relative z-10">
             <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 lg:gap-16 flex-1">
               {/* YouTube */}
-              <div className="flex items-center gap-1.5 opacity-100">
-                <span className="font-sans font-bold text-xl tracking-tighter text-black drop-shadow-sm">YouTube</span>
-              </div>
+
 
               {/* Logos */}
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQP08kDC-LuqPvGnwMw7Fmu6P-jUqjR0eZuyAwEWXv8FA&s=10" alt="Lokmat" className="h-8 md:h-10 mix-blend-multiply opacity-100 drop-shadow-sm" />

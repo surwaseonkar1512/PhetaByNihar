@@ -18,8 +18,8 @@ export const Footer: React.FC = () => {
           {/* Column 1: Brand */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-[#6E1E18] rounded-full flex items-center justify-center font-serif font-bold text-xl border-2 border-[#D7A65B]">
-                NT
+              <div className="w-14 h-14 bg-white rounded-full p-1 flex items-center justify-center border-2 border-[#D7A65B]">
+                <img src="/logo.png" alt="Pheta By Nihar" className="w-full h-full object-contain mix-blend-multiply" />
               </div>
               <span className="font-serif font-bold text-2xl text-[#D7A65B]">Pheta By Nihar</span>
             </div>
