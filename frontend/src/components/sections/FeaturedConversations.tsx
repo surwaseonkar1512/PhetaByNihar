@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { Play } from 'lucide-react';
 import { Divider } from '../ui/Divider';
 
 export const FeaturedConversations: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('All');
-  const tabs = ['All', 'Interviews', 'Podcasts', 'TV Shows', 'Culture Talks', 'Wedding Stories'];
+
 
   const videos = [
     { title: 'अधीपतीचा राजेशाही फेटा बांधतानाची खास झलक आणि फेटयाबद्दलचा विशेष अभिप्राय नक्की बघा @PhetabyNihar', channel: 'Zee Marathi', url: 'https://www.youtube.com/embed/OkjwpA-MdNc' },

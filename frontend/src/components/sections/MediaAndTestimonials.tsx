@@ -39,54 +39,34 @@ export const MediaAndTestimonials: React.FC = () => {
   );
 
   return (
-    <div className="flex flex-col w-full bg-[#F8F3EC]">
+    <section className="relative w-full py-20">
+      {/* Background Image */}
+      <div className="absolute inset-0 bg-[url('/aboutsideiamge.png')] bg-cover bg-center opacity-30 pointer-events-none"></div>
+      {/* Dark overlay for readability */}
+      <div className="absolute inset-0 bg-[#F8F3EC] opacity-70 pointer-events-none"></div>
 
-      {/* Media Recognition Bar */}
-      <section className="w-full relative py-16 px-5 ">
-        {/* Overlay to ensure logos are readable against the background */}
+      <div className="relative z-10 max-w-[1400px] mx-auto flex flex-col items-center px-5 md:px-10 lg:px-16">
+        {/* Media Recognition Bar */}
+        <section className="w-full py-8">
+          <div className="max-w-[1400px] mx-auto flex flex-wrap xl:flex-nowrap items-center justify-between gap-6 relative z-10">
+            <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 lg:gap-16 flex-1">
+              {/* YouTube */}
+              <div className="flex items-center gap-1.5 opacity-100">
+                <span className="font-sans font-bold text-xl tracking-tighter text-black drop-shadow-sm">YouTube</span>
+              </div>
 
-        <div className="max-w-[1400px] mx-auto flex flex-wrap xl:flex-nowrap items-center justify-between gap-6 relative z-10">
-
-          {/* Logos Container using real images from Wikimedia */}
-          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 lg:gap-16 flex-1">
-            {/* YouTube */}
-            <div className="flex items-center gap-1.5 opacity-100">
-              <span className="font-sans font-bold text-xl tracking-tighter text-black drop-shadow-sm">YouTube</span>
+              {/* Logos */}
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQP08kDC-LuqPvGnwMw7Fmu6P-jUqjR0eZuyAwEWXv8FA&s=10" alt="Lokmat" className="h-8 md:h-10 mix-blend-multiply opacity-100 drop-shadow-sm" />
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH6ggYEp8r-2N3ozRrXKNXUcHU01H96iDGRdba8aMlBQ&s=10" alt="Sakal" className="h-10 md:h-12 mix-blend-multiply object-contain opacity-100 drop-shadow-sm" />
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE_t8c3FrUZqYATxNprGMxbhTy5fJClxDYAdUxF-yLng&s=10" alt="ABP Majha" className="h-8 md:h-10 mix-blend-multiply opacity-100 drop-shadow-sm" />
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHOyF2m1reWnBerMi1NZDc_r_dQQK3H46Y-m3yCMnydA&s=10" alt="Zee 24 Taas" className="h-10 md:h-12 mix-blend-multiply opacity-100 drop-shadow-sm" />
             </div>
-
-            {/* Lokmat */}
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQP08kDC-LuqPvGnwMw7Fmu6P-jUqjR0eZuyAwEWXv8FA&s=10" alt="Lokmat" className="h-8 md:h-10 mix-blend-multiply opacity-100 drop-shadow-sm" />
-
-            {/* Sakal */}
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH6ggYEp8r-2N3ozRrXKNXUcHU01H96iDGRdba8aMlBQ&s=10" alt="Sakal" className="h-10 md:h-12 mix-blend-multiply object-contain opacity-100 drop-shadow-sm" />
-
-            {/* ABP Majha */}
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE_t8c3FrUZqYATxNprGMxbhTy5fJClxDYAdUxF-yLng&s=10" alt="ABP Majha" className="h-8 md:h-10 mix-blend-multiply opacity-100 drop-shadow-sm" />
-
-
-
-            {/* Zee 24 Taas */}
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHOyF2m1reWnBerMi1NZDc_r_dQQK3H46Y-m3yCMnydA&s=10" alt="Zee 24 Taas" className="h-10 md:h-12 mix-blend-multiply opacity-100 drop-shadow-sm" />
           </div>
+        </section>
 
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-20 px-5 md:px-10 lg:px-16  w-full relative overflow-hidden">
-        {/* Decorative elements */}
-        <div className="absolute left-0 bottom-0 opacity-80 pointer-events-none z-0">
-          <div className="relative">
-            <img src="/aboutsideiamge.png" alt="" className="w-[400px] md:w-[600px] lg:w-[700px] mix-blend-multiply object-contain object-bottom -scale-x-100" />
-            {/* Subtle Fog effects for blending */}
-            <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#F8F3EC] to-transparent"></div>
-            <div className="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-[#F8F3EC] to-transparent"></div>
-          </div>
-        </div>
-
-        <div className="max-w-[1400px] mx-auto flex flex-col items-center relative z-10">
+        {/* Testimonials */}
+        <section className="w-full py-12">
           <SectionHeader title="CLIENT LOVE" />
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 w-full mt-10">
             {reviews.map((review, index) => (
               <motion.div
@@ -97,14 +77,12 @@ export const MediaAndTestimonials: React.FC = () => {
                 transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
                 className="bg-[#FFFDFB] p-8 rounded-[24px] shadow-sm border border-[#E8D8C5] flex flex-col hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
               >
-
                 <div className="flex flex-col gap-3 mb-8">
                   <div className="text-6xl font-serif text-[#C48B3C] leading-none opacity-40 h-8">“</div>
                   <p className="font-sans text-[#4D2D22] text-sm md:text-base font-medium leading-relaxed mt-2">
                     {review.quote}
                   </p>
                 </div>
-
                 <div className="mt-auto flex items-center gap-4">
                   <img src={review.image} alt={review.name} className="w-12 h-12 rounded-full object-cover shadow-sm border-2 border-white" />
                   <div>
@@ -112,7 +90,6 @@ export const MediaAndTestimonials: React.FC = () => {
                     <p className="font-sans text-[#999999] text-xs uppercase tracking-widest font-semibold mt-0.5">{review.location}</p>
                   </div>
                 </div>
-
               </motion.div>
             ))}
           </div>
@@ -123,10 +100,8 @@ export const MediaAndTestimonials: React.FC = () => {
             <div className="w-2.5 h-2.5 rounded-full bg-[#E8D8C5] cursor-pointer hover:bg-[#C48B3C] transition-colors"></div>
             <div className="w-2.5 h-2.5 rounded-full bg-[#E8D8C5] cursor-pointer hover:bg-[#C48B3C] transition-colors"></div>
           </div>
-        </div>
-      </section>
-
-    </div>
+        </section>
+      </div>
+    </section>
   );
 };
-
