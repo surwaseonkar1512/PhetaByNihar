@@ -60,7 +60,7 @@ export const ServicesSection: React.FC = () => {
             className="bg-white rounded-[16px] overflow-hidden shadow-soft group hover:-translate-y-2 transition-transform duration-300 flex flex-col h-full border border-[#E8D8C5]"
           >
             {/* Card Image */}
-            <div className="relative h-48 overflow-hidden">
+            <div className="relative h-64 sm:h-72 overflow-hidden">
               <img
                 src={service.image}
                 alt={service.title}
@@ -69,16 +69,14 @@ export const ServicesSection: React.FC = () => {
             </div>
 
             {/* Card Content */}
-            <div className="p-6 flex flex-col flex-grow relative">
+            <div className="p-5 flex flex-col flex-grow relative">
               <div className="absolute -top-8 left-6 bg-white p-3 rounded-xl shadow-soft border border-[#E8D8C5]">
                 {service.icon}
               </div>
-              <h3 className="font-serif text-[#4D2D22] text-xl font-bold mt-4 mb-3">{service.title}</h3>
+              <h3 className="font-serif text-[#4D2D22] text-lg font-bold mt-4 mb-3">{service.title}</h3>
               <p className="font-sans text-[#666666] text-sm mb-6 flex-grow">{service.description}</p>
 
-              <button className="text-[#6E1E18] font-sans text-sm font-semibold uppercase tracking-wider flex items-center hover:text-[#7D201D] transition-colors w-fit">
-                Explore <ArrowRight className="ml-1 w-4 h-4" />
-              </button>
+
             </div>
           </motion.div>
         ))}
